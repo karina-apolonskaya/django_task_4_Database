@@ -1,0 +1,4 @@
+# Django stuff:
+.idea/
+venv/
+requirements.txt

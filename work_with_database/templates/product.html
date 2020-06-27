@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Телефон{% endblock %}
+{% block content %}
+    <div class="container">
+        <div class="header">
+            <h1>{{ phone_name }}</h1>
+        </div>
+        <div class="content">
+            <table align="left">
+                <tr><td align="right"><img src="{{ phone_img }}"
+                             alt="альтернативный текст" height="300" width="150"> </td>
+                    <td><p> <font size="5" color="black">Цена: {{ phone_price }} руб.</font></p>
+                    <p><font size="5" color="black">Дата выхода: {{ phone_date }}</font></p>
+                {% if phone_lte %}
+                    <p><font size="5" color="black">Поддержка LTE: Да </font></p>
+                {% else %}
+                    <p><font size="5" color="black">Поддержка LTE: Нет </font></p></td>
+                {% endif %}
+            </table>
+        </div>
+    </div>
+{% endblock %}
